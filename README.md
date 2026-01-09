@@ -1,5 +1,22 @@
 # TriviQ - Trivia Quiz Game
 
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey.svg)
+
+## 🚀 Quick Start
+
+\`\`\`bash
+# Clone the repository
+git clone https://github.com/RichardOyelowo/CLI_QUIZ.git
+cd CLI_QUIZ
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the game
+python project.py
+\`\`\`
+
 #### Video Demo:  <https://www.youtube.com/watch?v=w7BfnOQqPwA&feature=youtu.be>
 
 #### Description:
@@ -14,30 +31,48 @@ You can choose a topic, answer 10 questions, and get a grade at the end based on
 ### 🎮 How I Structured it
 When you run the game:
 1. It first shows a **grading table** so you know how scores are ranked.
-    Grades
-+--------+----------------+
-| Score  | Grade          |
-+--------+----------------+
-| 8-10   | Excellent      |
-| 6-7    | Good  |
-| 4-5    | Average        |
-| 0-3    | Low            |
-+--------+----------------+
-
+```Grades
++---------+-----------+
+| Score   | Grade     |
++=========+===========+
+| 8-10    | Excellent |
++---------+-----------+
+| 6-7     | Good      |
++---------+-----------+
+| 4-5     | Average   |
++---------+-----------+
+| 0-3     | Low       |
++---------+-----------+
+```
 2. Then it shows a list of topics (like History, Science, Geography, etc.).
-    Topics
-+----------+-------------------+
-| OPTIONS  | CHOICE            |
-+----------+-------------------+
-| A        | General Knowledge |
-| B        | History           |
-| C        | Mathematics       |
-...
+```Topics
+┌───────────┬───────────────────┐
+│ OPTIONS   │ CHOICE            │
+├───────────┼───────────────────┤
+│ A         │ General Knowledge │
+├───────────┼───────────────────┤
+│ B         │ History           │
+├───────────┼───────────────────┤
+│ C         │ Mathematics       │
+├───────────┼───────────────────┤
+│ D         │ Geography         │
+├───────────┼───────────────────┤
+│ E         │ Mythology         │
+├───────────┼───────────────────┤
+│ F         │ Politics          │
+├───────────┼───────────────────┤
+│ G         │ Art               │
+├───────────┼───────────────────┤
+│ H         │ Vehicles          │
+├───────────┼───────────────────┤
+│ I         │ Sports            │
+└───────────┴───────────────────┘
+```
 
-3. You choose one topic by typing its letter (like “A” for General Knowledge).
-4. It pulls **10 True/False questions** from the API.
-5. You answer each question and get **instant Validation** (✅ or ❌).
-6. At the end, you’ll see your **total score and grade**.
+4. You choose one topic by typing its letter (like “A” for General Knowledge).
+5. It pulls **10 True/False questions** from the API.
+6. You answer each question and get **instant Validation** (✅ or ❌).
+7. At the end, you’ll see your **total score and grade**.
 
 ---
 
@@ -73,11 +108,11 @@ I felt it would be more fun and interactive than waiting until the end to see ho
 
 #### 7. Grading System
 Instead of percentages, I used score ranges just to make it a bit more friendly(learning format):
-- 8–10 → Excellent
-- 6–7 → Above Average
-- 4–5 → Average
-- 0–3 → Low
 
+- `8–10` → **Excellent**
+- `6–7` → **Above Average**
+- `4–5` → **Average**
+- `0–3` → **Low**
 
 ---
 
@@ -88,15 +123,15 @@ Here’s a rough breakdown of how everything works:
 **Questions class**- Handles topics, getting user’s choice, and fetching questions from the API
     - ***check_options()*** - Makes sure user picks a valid topic
     - ***get_questions()*** - Sends the request to the API using the selected topic ID, cleans up the question text with html.unescape(), and stores them in a list.
-
+```
 - **question_data()** - Loops through all 10 questions
 - **validate_answer()** - Checks your answer and adds points
 - **check_grade()** - Turns your score into a grade
-
+```
 ---
 
-### Libraries in my code
-I use these libraries:
-- `requests` (for API calls)
-- `tabulate` (for tables)
-
+## 🛠️ Technologies Used
+- **Python 3.x**
+- **requests** - HTTP library for API calls
+- **tabulate** - Creates formatted tables
+- **Open Trivia Database API** - Question source
