@@ -1,0 +1,3 @@
+requests # for API calls
+tabulate # for printing tables in the terminal
+html  # for escape the API characters with th unescape method
