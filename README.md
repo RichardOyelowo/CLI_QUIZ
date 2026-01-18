@@ -9,10 +9,9 @@
 
 </div>
 
-## 🚀 Quick Start
-
 ![Demo](images/screenshot.png)
 
+## 🚀 Quick Start
 
 ```bash
 # Clone the repository
