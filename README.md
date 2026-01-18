@@ -1,11 +1,20 @@
+<div align=center>
+
 # TriviQ - Trivia Quiz Game
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey.svg)
+[![Python](https://img.shields.io/badge/Python-3.x-blue.svg)](https://www.python.org/)
+[![Status](https://img.shields.io/badge/Status-Active-success.svg)]()
+
+</div>
 
 ## 🚀 Quick Start
 
-\`\`\`bash
+![Demo](images/screenshot.png)
+
+
+```bash
 # Clone the repository
 git clone https://github.com/RichardOyelowo/CLI_QUIZ.git
 cd CLI_QUIZ
@@ -15,7 +24,7 @@ pip install -r requirements.txt
 
 # Run the game
 python project.py
-\`\`\`
+```
 
 #### Video Demo:  <https://www.youtube.com/watch?v=w7BfnOQqPwA&feature=youtu.be>
 
